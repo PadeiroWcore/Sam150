@@ -6,7 +6,7 @@ class WowzaStreamingService {
     this.baseUrl = '';
     this.username = '';
     this.password = '';
-    this.application = 'samhost';
+    this.application = 'live'; // Usar aplicação padrão
     this.initialized = false;
   }
 

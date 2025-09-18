@@ -786,7 +786,7 @@ router.get('/source-urls', authMiddleware, async (req, res) => {
     
     const sourceUrls = {
       http_m3u8: `https://${wowzaHost}/${userLogin}/${userLogin}/playlist.m3u8`,
-      rtmp: `rtmp://${wowzaHost}:1935/${userLogin}/${userLogin}`,
+      rtmp: `rtmp://${wowzaHost}:1935/${userLogin}`,
       recommended: 'http_m3u8'
     };
 

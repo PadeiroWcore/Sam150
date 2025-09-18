@@ -67,18 +67,18 @@
 ## 🔗 URLs de Streaming
 
 ### URLs de Streaming
-- **RTMP:** rtmp://samhost.wcore.com.br:1935/samhost
-- **HLS OBS:** http://stmv1.udicast.com:1935/samhost/{usuario}_live/playlist.m3u8
-- **HLS HTTP OBS:** http://stmv1.udicast.com/samhost/{usuario}_live/playlist.m3u8
-- **HLS SMIL (Playlists):** http://stmv1.udicast.com:1935/samhost/smil:playlists_agendamentos.smil/playlist.m3u8
-- **HLS HTTP SMIL:** http://stmv1.udicast.com/samhost/smil:playlists_agendamentos.smil/playlist.m3u8
-- **DASH OBS:** http://stmv1.udicast.com:1935/samhost/{usuario}_live/manifest.mpd
-- **DASH SMIL:** http://stmv1.udicast.com:1935/samhost/smil:playlists_agendamentos.smil/manifest.mpd
-- **RTSP OBS:** rtsp://stmv1.udicast.com:554/samhost/{usuario}_live
-- **RTSP SMIL:** rtsp://stmv1.udicast.com:554/samhost/smil:playlists_agendamentos.smil
-- **RTMP SMIL:** rtmp://stmv1.udicast.com:1935/samhost/smil:playlists_agendamentos.smil
+- **RTMP:** rtmp://stmv1.udicast.com:1935/{usuario}
+- **HLS OBS:** http://stmv1.udicast.com:1935/{usuario}/{usuario}_live/playlist.m3u8
+- **HLS HTTP OBS:** http://stmv1.udicast.com/{usuario}/{usuario}_live/playlist.m3u8
+- **HLS SMIL (Playlists):** http://stmv1.udicast.com:1935/{usuario}/smil:playlists_agendamentos.smil/playlist.m3u8
+- **HLS HTTP SMIL:** http://stmv1.udicast.com/{usuario}/smil:playlists_agendamentos.smil/playlist.m3u8
+- **DASH OBS:** http://stmv1.udicast.com:1935/{usuario}/{usuario}_live/manifest.mpd
+- **DASH SMIL:** http://stmv1.udicast.com:1935/{usuario}/smil:playlists_agendamentos.smil/manifest.mpd
+- **RTSP OBS:** rtsp://stmv1.udicast.com:554/{usuario}/{usuario}_live
+- **RTSP SMIL:** rtsp://stmv1.udicast.com:554/{usuario}/smil:playlists_agendamentos.smil
+- **RTMP SMIL:** rtmp://stmv1.udicast.com:1935/{usuario}/smil:playlists_agendamentos.smil
 - **Vídeos VOD:** http://stmv1.udicast.com:80/vod/_definst_/mp4:{usuario}/{pasta}/{arquivo}/playlist.m3u8
-- **Aplicação Wowza:** samhost (aplicação principal para todos os usuários)
+- **Aplicação Wowza:** {usuario} (aplicação específica por usuário)
 
 ### Para Transmissão ao Vivo (OBS)
 - **RTMP URL:** `rtmp://samhost.wcore.com.br:1935/{usuario}`

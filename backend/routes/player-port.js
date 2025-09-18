@@ -70,7 +70,7 @@ router.get('/iframe', async (req, res) => {
           const wowzaHost = 'stmv1.udicast.com';
           
           // Para transmissão SMIL, usar URL específica
-          videoUrl = `http://${wowzaHost}:80/${userLogin}/${userLogin}/playlist.m3u8`;
+          videoUrl = `http://${wowzaHost}:80/${userLogin}/smil:playlists_agendamentos.smil/playlist.m3u8`;
           title = `Playlist: ${transmission.playlist_nome}`;
           isLive = true;
           
@@ -139,7 +139,7 @@ router.get('/iframe', async (req, res) => {
           const transmission = userTransmission[0];
           console.log(`✅ Transmissão de usuário encontrada:`, transmission);
           const wowzaHost = 'stmv1.udicast.com';
-          videoUrl = `http://${wowzaHost}:1935/samhost/smil:playlists_agendamentos.smil/playlist.m3u8`;
+          videoUrl = `http://${wowzaHost}:1935/${login}/smil:playlists_agendamentos.smil/playlist.m3u8`;
           title = `Playlist: ${transmission.playlist_nome}`;
           isLive = true;
         } else {
@@ -148,7 +148,7 @@ router.get('/iframe', async (req, res) => {
           // 2. Verificar transmissão OBS
           try {
             const wowzaHost = 'stmv1.udicast.com';
-            videoUrl = `http://${wowzaHost}:1935/samhost/${login}_live/playlist.m3u8`;
+            videoUrl = `http://${wowzaHost}:1935/${login}/${login}_live/playlist.m3u8`;
             title = `Stream OBS: ${login}`;
             isLive = true;
           } catch (obsError) {
@@ -176,14 +176,14 @@ router.get('/iframe', async (req, res) => {
         videoUrl = `http://${wowzaHost}:80/${userFromStream}/${userFromStream}/playlist.m3u8`;
       } else {
         // Stream OBS - usar aplicação específica do usuário
-        videoUrl = `http://${wowzaHost}:80/${userLogin}/${stream}/playlist.m3u8`;
+        videoUrl = `http://${wowzaHost}:80/${userLogin}/${userLogin}_live/playlist.m3u8`;
       }
       title = `Stream: ${stream}`;
       isLive = true;
     } else if (userLogin && userLogin !== 'usuario') {
       // Playlist específica
       try {
-        const [playlistRows] = await db.execute(
+     videoUrl = `http://${wowzaHost}:80/${userLogin}/${userLogin}_live/playlist.m3u8`;
           'SELECT nome FROM playlists WHERE id = ?',
           [playlist]
         );

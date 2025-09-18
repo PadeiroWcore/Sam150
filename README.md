@@ -220,7 +220,7 @@ Após o deploy, o sistema estará disponível em:
 - **Backend API:** http://samhost.wcore.com.br:3001/api
 - **Health Check:** http://samhost.wcore.com.br:3001/api/health
 - **Player iFrame:** http://samhost.wcore.com.br:3001/api/player-port/iframe
-- **Streaming RTMP:** rtmp://samhost.wcore.com.br:1935/{usuario}
+- **Streaming RTMP:** rtmp://stmv1.udicast.com:1935/{usuario}
 - **Streaming HLS:** http://stmv1.udicast.com:80/{usuario}/{usuario}_live/playlist.m3u8
 - **Streaming HLS Seguro:** https://stmv1.udicast.com:443/{usuario}/{usuario}_live/playlist.m3u8
 - **Streaming DASH:** http://stmv1.udicast.com:80/{usuario}/{usuario}_live/manifest.mpd
