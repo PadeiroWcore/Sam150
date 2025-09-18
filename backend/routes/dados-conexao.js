@@ -98,22 +98,22 @@ router.get('/obs-config', authMiddleware, async (req, res) => {
     res.json({
       success: true,
       obs_config: {
-        rtmp_url: `rtmp://${wowzaHost}:1935/samhost`,
+        rtmp_url: `rtmp://${wowzaHost}:1935/${userLogin}`,
         stream_key: `${userLogin}_live`,
-        hls_url: `http://${wowzaHost}:1935/samhost/${userLogin}_live/playlist.m3u8`,
-        hls_http_url: `http://${wowzaHost}/samhost/${userLogin}_live/playlist.m3u8`,
-        dash_url: `http://${wowzaHost}:1935/samhost/${userLogin}_live/manifest.mpd`,
-        rtsp_url: `rtsp://${wowzaHost}:554/samhost/${userLogin}_live`,
+        hls_url: `http://${wowzaHost}:1935/${userLogin}/${userLogin}_live/playlist.m3u8`,
+        hls_http_url: `http://${wowzaHost}/${userLogin}/${userLogin}_live/playlist.m3u8`,
+        dash_url: `http://${wowzaHost}:1935/${userLogin}/${userLogin}_live/manifest.mpd`,
+        rtsp_url: `rtsp://${wowzaHost}:554/${userLogin}/${userLogin}_live`,
         max_bitrate: allowedBitrate,
         max_viewers: userConfig.espectadores,
         recording_enabled: userConfig.status_gravando === 'sim',
         recording_path: `/home/streaming/${userLogin}/recordings/`,
         // URLs para SMIL (playlists)
-        smil_hls_url: `http://${wowzaHost}:1935/samhost/smil:playlists_agendamentos.smil/playlist.m3u8`,
-        smil_hls_http_url: `http://${wowzaHost}/samhost/smil:playlists_agendamentos.smil/playlist.m3u8`,
-        smil_rtmp_url: `rtmp://${wowzaHost}:1935/samhost/smil:playlists_agendamentos.smil`,
-        smil_rtsp_url: `rtsp://${wowzaHost}:554/samhost/smil:playlists_agendamentos.smil`,
-        smil_dash_url: `http://${wowzaHost}:1935/samhost/smil:playlists_agendamentos.smil/manifest.mpd`
+        smil_hls_url: `http://${wowzaHost}:1935/${userLogin}/smil:playlists_agendamentos.smil/playlist.m3u8`,
+        smil_hls_http_url: `http://${wowzaHost}/${userLogin}/smil:playlists_agendamentos.smil/playlist.m3u8`,
+        smil_rtmp_url: `rtmp://${wowzaHost}:1935/${userLogin}/smil:playlists_agendamentos.smil`,
+        smil_rtsp_url: `rtsp://${wowzaHost}:554/${userLogin}/smil:playlists_agendamentos.smil`,
+        smil_dash_url: `http://${wowzaHost}:1935/${userLogin}/smil:playlists_agendamentos.smil/manifest.mpd`
       },
       user_limits: {
         bitrate: {
