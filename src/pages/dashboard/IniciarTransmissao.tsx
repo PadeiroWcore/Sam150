@@ -144,7 +144,7 @@ const IniciarTransmissao: React.FC = () => {
             ? 'http://samhost.wcore.com.br:3001'
             : 'http://localhost:3001';
           
-          setCurrentPlayerUrl(`${baseUrl}/api/player-port/iframe?login=${userLogin}&stream=${userLogin}_live&player=1&contador=true`);
+          setCurrentPlayerUrl(`${baseUrl}/api/player-port/iframe?login=${userLogin}&player=1&contador=true`);
           setShowPlayer(true);
         } else {
           setShowPlayer(false);
